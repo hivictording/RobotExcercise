@@ -12,8 +12,8 @@ ${email}    vding@sonicwall.com
 ADD NEW USER
     open browser    ${url}    ${browser}
     maximize browser window
-    set selenium speed    1s
-    Add User Details    ${username}    ${password}    ${email}
+    set selenium speed    1 seconds
+    wait until keyword succeeds    2 minutes    3 seconds    Add User Details    ${username}    ${password}    ${email}
     sleep    10s
     close browser
 
