@@ -2,9 +2,12 @@
 Library    SeleniumLibrary
 
 *** Keywords ***
-Start Browser
+Init Test
     [Arguments]    ${url}    ${browser}
     open browser    ${url}    ${browser}
-    ${title}=    get title
-    [Return]    ${title}
+    maximize browser window
+#    ${title}=    get title
+#    [Return]    ${title}
 
+End Test
+    close browser
